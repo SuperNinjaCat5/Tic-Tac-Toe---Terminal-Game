@@ -67,6 +67,17 @@ def player_clicked(r, c):
                 b.config(state="disabled")
         root.after(3000, reset_game)
         return
+    
+    info = []
+    for row in buttons:
+        for button in row:
+            info.append(button.cget("text"))
+
+    if len(info) == 9 and all(text != "" for text in info):
+        label.config(text="Draw!")
+        winstate = True
+        root.after(3000, reset_game)
+        return
 
     current_player = ultils.toggle_xy(current_player)
     label.config(text=f"It's player {current_player}'s turn!")
