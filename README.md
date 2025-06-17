@@ -23,5 +23,10 @@
 2. Clone or download this repo.
 3. Run the game:
 
+**or**
+
+1. Open dist
+2. Download and run the .exe **(may or may not work!)**
+
 ```bash
 python main.py
